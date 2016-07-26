@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 
-//list of ingredients
+//List of ingredients
 
 var ingredients = {
     strong: ['Glug of rum', 'slug of whisky', 'splash of gin'],
@@ -28,7 +28,6 @@ var Drink = function(strong, salty, bitter, sweet, fruity) {
 
 $('.orderButton').click(function(event) {
 	event.preventDefault();
-var html = '';
 var random = Math.floor(Math.random() * 3);
 var newDrink = new Drink(
 	$('.strongDrink input:checked').val(),
@@ -37,81 +36,31 @@ var newDrink = new Drink(
 	$('.sweetDrink input:checked').val(),
 	$('.fruityDrink input:checked').val());
 
-
+//Clear drinks
 $('.display-drinks').empty();
 
+
+//If user selected yes - display random drink by user preference
 if (newDrink.strong === 'true') {
 	$('.display-drinks').append('<li>' + ingredients.strong[random] + '</li>');
-	console.log(ingredients.strong[random]);
+
 }
 if (newDrink.salty === 'true') {
 	$('.display-drinks').append('<li>' + ingredients.salty[random] + '</li>');
-	console.log(ingredients.strong[random]);
 }
 if (newDrink.bitter === 'true') {
 	$('.display-drinks').append('<li>' + ingredients.bitter[random] + '</li>');
-	console.log(ingredients.strong[random]);
 }
 if (newDrink.sweet === 'true') {
 	$('.display-drinks').append('<li>' + ingredients.sweet[random] + '</li>');
-	console.log(ingredients.strong[random]);
 }
 if (newDrink.fruity === 'true') {
 	$('.display-drinks').append('<li>' + ingredients.fruity[random] + '</li>');
-	console.log(ingredients.strong[random]);
 }
 
 
 
-
-
-
-
-
-// var trueProperties = [];
-// 	for(var prop in newDrink) {
-// 		console.log(newDrink[prop]);
-// 		if(newDrink[prop] == 'true') {
-// 			trueProperties.push(newDrink[prop]);
-// 			// console.log(trueProperties);
-// 		// var html = '';
-//   //       html += '<li>' + rand + '</li>';
-//   //       $('.display-drinks').append();
-// 		// }
-// 	}
-
-
 });	
-
-//console.log(newDrink);
-
-
-
-// };
-
-
-// var rand = ingredients[ingredientCounter][Math.floor(Math.random() * ingredients[ingredientCounter].length)];
-
-function randomNumber() {
-	var random = Math.floor(Math.random() * 3);
-	console.log(random);
-
-
-
-
-};
-randomNumber();
-
-
-// $(".yes-button").click(function() {
-//           $(".random-drink").empty();
-//         //alert(questionList[questionCounter].ingredients);
-//         var rand = ingredients.strong[Math.floor(Math.random() * ingredients.strong.length)];
-//          var rand = questionList[ingredientCounter].ingredients[Math.floor(Math.random() * questionList[ingredientCounter].ingredients.length)];
-//           var html = '';
-//           html += '<li>' + rand + '</li>';
-//           $('.random-drink').append(html);
-
 
 
 

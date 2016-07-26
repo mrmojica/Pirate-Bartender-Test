@@ -1,0 +1,13 @@
+body {
+	text-align: center;
+	width: 500px;
+	margin: 0 auto;
+}
+
+ul { 
+	list-style:none;
+}
+
+li {
+	font-size: 2em;
+}
